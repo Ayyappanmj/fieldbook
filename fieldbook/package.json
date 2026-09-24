@@ -1,0 +1,20 @@
+{
+  "name": "fieldbook",
+  "version": "1.0.0",
+  "description": "Fieldbook: a responsive project and task tracker built with vanilla JavaScript (ES modules).",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "start:python": "python3 -m http.server 5173",
+    "test:e2e": "node --test tests/e2e/*.e2e.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}

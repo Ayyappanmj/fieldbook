@@ -1,0 +1,17 @@
+{
+  "name": "fieldbook-api",
+  "version": "1.0.0",
+  "description": "Fieldbook REST API: the backend described in the Fieldbook system architecture plan.",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "DB_MODE=memory node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "^8.13.0"
+  },
+  "license": "MIT"
+}

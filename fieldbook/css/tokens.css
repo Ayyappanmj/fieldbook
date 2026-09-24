@@ -1,0 +1,107 @@
+/*
+ * Design tokens.
+ * Palette: ink navy, hi-vis yellow, chalk blue-grey, teal (done), coral (late).
+ * Components only ever use these variables, so theming = swapping this file's values.
+ */
+:root {
+  /* Type */
+  --font-display: 'Bricolage Grotesque', 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Public Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: clamp(1.5rem, 1.25rem + 0.9vw, 1.9rem);
+  --fs-2xl: clamp(1.85rem, 1.4rem + 1.6vw, 2.6rem);
+  --fs-hero: clamp(2.5rem, 1.5rem + 3.8vw, 4.4rem);
+
+  /* Space */
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: clamp(3.5rem, 8vw, 6rem);
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  /* Colour: light theme */
+  --bg: #f2f4f7;
+  --surface: #ffffff;
+  --surface-2: #e8ecf2;
+  --ink: #12203a;
+  --ink-muted: #4a5568;
+  --line: #d3dae3;
+  --line-strong: #8792a5;
+
+  --primary: #12203a;
+  --primary-hover: #22345a;
+  --on-primary: #ffffff;
+  --accent: #ffcb2e;
+  --accent-stripe: #e9ae00;
+  --on-accent: #12203a;
+  --focus: #1d4ed8;
+
+  --teal: #0f766e;
+  --teal-soft: #d6f0ec;
+  --teal-ink: #0b5f59;
+  --coral: #b4351a;
+  --coral-soft: #fbe3dc;
+  --coral-ink: #a02c12;
+  --amber-soft: #fff0bd;
+  --amber-ink: #5c4400;
+
+  --inverse-bg: #12203a;
+  --inverse-fg: #f2f4f7;
+  --inverse-accent: #ffcb2e;
+  --cta-bg: #12203a;
+
+  --shadow-pop: 0 24px 60px rgba(9, 16, 32, 0.35);
+  --backdrop: rgba(9, 16, 32, 0.55);
+
+  --header-h: 4rem;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0d1524;
+  --surface: #15213a;
+  --surface-2: #1e2c4a;
+  --ink: #eaf0f9;
+  --ink-muted: #a9b5c9;
+  --line: #2b3b5c;
+  --line-strong: #6b7b99;
+
+  --primary: #ffcb2e;
+  --primary-hover: #ffd85e;
+  --on-primary: #12203a;
+  --accent: #ffcb2e;
+  --accent-stripe: #e0a800;
+  --focus: #93c5fd;
+
+  --teal: #2dd4bf;
+  --teal-soft: #0f3b38;
+  --teal-ink: #8ee3d8;
+  --coral: #ff8a6b;
+  --coral-soft: #4a1f17;
+  --coral-ink: #ffb4a2;
+  --amber-soft: #4a3b0b;
+  --amber-ink: #ffe08a;
+
+  --inverse-bg: #eaf0f9;
+  --inverse-fg: #12203a;
+  --inverse-accent: #12203a;
+  --cta-bg: #12203a;
+
+  --shadow-pop: 0 24px 60px rgba(0, 0, 0, 0.6);
+  --backdrop: rgba(0, 0, 0, 0.65);
+  color-scheme: dark;
+}

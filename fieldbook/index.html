@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fieldbook · Project and task tracker</title>
+    <meta name="description" content="Fieldbook keeps every project's tasks, deadlines and progress on one page." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FFCB2E'/%3E%3Cpath d='M8 17l5.5 5.5L24 10' fill='none' stroke='%2312203A' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+    <!-- Apply the saved theme before first paint to avoid a light/dark flash. -->
+    <script>
+      (function () {
+        try {
+          var pref = JSON.parse(localStorage.getItem('fieldbook:theme')) || 'system';
+          var dark = pref === 'dark' || (pref === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        } catch (e) {}
+      })();
+    </script>
+
+    <!--
+      Optional: point the UI at a real REST API instead of the built-in mock.
+      Uncomment and adjust, then see README.md ("Connecting a back end").
+
+      <script>
+        window.FIELDBOOK_CONFIG = { apiMode: 'http', apiBaseUrl: 'http://localhost:3000/api' };
+      </script>
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/views.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div id="app-header"></div>
+    <main id="main" tabindex="-1"><p class="boot">Loading Fieldbook…</p></main>
+    <footer id="app-footer" class="site-footer"></footer>
+
+    <div id="toast-region" class="toast-region" role="status" aria-live="polite"></div>
+    <div id="route-announcer" class="visually-hidden" aria-live="assertive"></div>
+
+    <noscript>
+      <p class="boot">Fieldbook needs JavaScript to run. Please enable it in your browser settings.</p>
+    </noscript>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
